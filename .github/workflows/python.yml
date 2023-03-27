@@ -1,0 +1,23 @@
+name: Python Script
+on:
+  push:
+    - "master"
+  workflow_dispatch:
+
+jobs:
+  python-script:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: One line script
+        run: echo this is a python script 
+      
+      - name: setup python 
+        uses: actions/setup-python@v4
+        with:
+          python-veriosn: 3.8
+      
+      - name: Python Script
+        run: python script.py

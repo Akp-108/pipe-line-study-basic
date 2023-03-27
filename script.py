@@ -1,0 +1,1 @@
+print("this script is runing though pipeline")
