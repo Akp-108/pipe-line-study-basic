@@ -5,11 +5,13 @@ on:
       - "master"
   workflow_dispatch:
 
+env:
+  name: Atul Kumar Pandey
 jobs:
   build:
     runs-on: ubuntu-latest
-    needs: build2
-
+    # this is the use to make dependecies of on job to an other.
+    needs: build2     
 
     steps:
       - uses: actions/checkout@v3
@@ -38,4 +40,5 @@ jobs:
           echo this is the data for one line
           echo this is the data from second line
           echo this is the data for third line
+          echo pipeline is run by $name
 
