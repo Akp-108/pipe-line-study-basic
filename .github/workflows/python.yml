@@ -1,7 +1,8 @@
 name: Python Script
 on:
   push:
-    - "master"
+    branches:
+      - "master"
   workflow_dispatch:
 
 jobs:
