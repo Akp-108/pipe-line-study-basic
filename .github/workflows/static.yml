@@ -1,0 +1,39 @@
+name: static-data
+on:
+  push:
+    branches:
+      - "master"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line static script
+        run: echo This is a static data 
+      
+      - name: Run multi-line command
+        run: |
+          echo this is the data for one line
+          echo this is the data from second line
+          echo this is the data for third line
+
+
+  build2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line static script
+        run: echo This is a static data 
+      
+      - name: Run multi-line command
+        run: |
+          echo this is the data for one line
+          echo this is the data from second line
+          echo this is the data for third line
+
